@@ -1,0 +1,89 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	font-size: 62.5%;
+}
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	// font-family: 'Dancing Script', cursive;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.8rem;
+	background-color: rgb(233, 233, 233);
+}
+.wrapper {
+	width: 60vw;
+	background-color: #fff;
+	box-shadow: 0 0 10px #000;
+   
+}
+.header {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	gap: 3rem;
+	align-items: flex-start;
+	position: relative;
+	min-height: 35vh;
+	padding: 2rem 4rem;
+	font-family: 'Dancing Script', cursive;
+	background-image: url('../img/pistachios-3450670_1280.jpg');
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
+	&__shadow {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, 0.35);
+		z-index: -1;
+	}
+	&__title {
+		font-size: 5rem;
+		color: #fff;
+	}
+	&__search-input {
+		padding: 1rem 2rem;
+		margin-bottom: 4rem;
+		width: 100%;
+		font-size: 1.6rem;
+		border-radius: 5px;
+		background-color: rgba(255, 255, 255, 0.85);
+	}
+}
+.drink-list {
+	padding: 2rem 4rem;
+	&__heading {
+		padding: 3rem 0;
+	}
+	ul {
+		padding-bottom: 3rem;
+		font-size: 2.3rem;
+		list-style: none;
+	}
+	&__item {
+		padding: 0.8rem 3rem;
+		border-bottom: 1px solid rgb(226, 226, 266);
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+}
+@media (max-width: 672px) {
+	.wrapper {
+		width: 100vw;
+	}
+	.header {
+		min-height: 30vh;
+		align-items: center;
+	}
+}
